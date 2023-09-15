@@ -2,7 +2,7 @@ import {FaBookOpen,FaDollarSign} from 'react-icons/fa';
 
 const Card = ({carddata,handleaddcard}) => {
    
-    const{image,title,title_description,price,credit} = carddata;
+    const{image,title,title_description,price,credit,id} = carddata;
     return (
         <div >
           <div className="card w-80 h-full bg-base-100 shadow-xl">
@@ -17,7 +17,7 @@ const Card = ({carddata,handleaddcard}) => {
         <FaBookOpen></FaBookOpen> <p> Credit: {credit}</p>
     </div>
     <div className="card-actions">
-      <button onClick={()=>handleaddcard(carddata)} className="btn btn-primary">Select</button>
+      <button  onClick={()=>handleaddcard(carddata,id,credit)} className="btn btn-primary">Select</button>
     </div>
   </div>
 </div>

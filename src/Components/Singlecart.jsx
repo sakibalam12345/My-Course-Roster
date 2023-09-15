@@ -1,12 +1,23 @@
 
 
+
 const Singlecart = ({cartname}) => {
-    const{title} = cartname
+    const{title} = cartname;
+   
+    return ( 
+  <>
+  <li className="list-decimal">{title}</li>
     
-    return (
-        <div>
-            <h1>{title}</h1>
-        </div>
+  </>
+
+  
+  
+    
+    
+       
+           
+
+                
     );
 };
 
