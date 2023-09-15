@@ -7,13 +7,13 @@ import Header from './Components/Header'
 
 function App() {
 
-  const [addcard, setaddcard] = useState([]);
+  const [allcards,setallcards] = useState([])
 
-  const handleaddcard = (cardname) => {
+  const handleaddcard = cardname => {
     console.log(cardname)
-    const newaddcard = [...addcard, cardname]
-    setaddcard(newaddcard)
-   
+    const newallcards = [...allcards,cardname];
+    setallcards(newallcards)
+  
 
   }
  
@@ -23,7 +23,7 @@ function App() {
     <Header></Header>
     <div className='max-w-7xl mx-auto mt-12 flex gap-5 justify-around'>
       <Cards handleaddcard={handleaddcard}></Cards>
-      <Cart addcard = {addcard}></Cart>
+      <Cart allcards={allcards}></Cart>
     </div>
      
     

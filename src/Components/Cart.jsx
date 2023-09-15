@@ -1,17 +1,24 @@
+import Singlecart from "./singlecart";
 
 
-const Cart = ({singlecard}) => {
-    console.log(singlecard)
+
+const Cart = ({allcards}) => {
+    
+    console.log(allcards)
+    
    
     return (
-        <div className="bg-slate-400 w-72">
-            <h1 className="text-blue-600 mb-2">Credit Hour Remaining 7 hr</h1>
-            <hr />
-            <h1 className="text-sm font-bold text-center mt-2">Course Name</h1>
+        
             <div>
-               {/* <h1>{title}</h1> */}
+                <h1>all card: {allcards.length}</h1>
+                {
+                    allcards.map(card=><Singlecart cartname={card}></Singlecart>)
+                }
             </div>
-        </div>
+            
+            
+             
+        
     );
 };
 
