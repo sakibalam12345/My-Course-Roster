@@ -2,7 +2,7 @@ import Singlecart from "./singlecart";
 
 
 
-const Cart = ({allcards,count}) => {
+const Cart = ({allcards,count,remainingtime}) => {
     
     console.log(allcards)
     
@@ -13,7 +13,7 @@ const Cart = ({allcards,count}) => {
      
             <div className="bg-slate-300 w-72 h-80 rounded-lg" >
                
-                <h3 className="text-center text-blue-600 mt-5 mb-5">Credit Hour Remaining 7 hr</h3>
+                <h3 className="text-center text-blue-600 mt-5 mb-5">Credit Hour Remaining {remainingtime} hr</h3>
                 <hr />
                 <h1 className="text-sm font-extrabold text-center mt-2 mb-2">Course Name</h1>
                 {
