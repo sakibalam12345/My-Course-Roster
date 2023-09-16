@@ -20,7 +20,7 @@ const Cart = ({allcards,count,remainingtime}) => {
         allcards.map(card=><Singlecart cartname={card} ></Singlecart>)
                  }
                 <hr />
-                <h1 className="text-center font-bold">Total Credit Hour: {count}</h1>
+                <h1 className="text-center font-bold">Total Credit Hour: {count} </h1>
 
             </div>
             
