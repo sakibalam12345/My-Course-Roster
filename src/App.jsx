@@ -4,6 +4,9 @@ import './App.css'
 import Cards from './Components/Cards'
 import Cart from './Components/Cart'
 import Header from './Components/Header'
+  import {ToastContainer,toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
@@ -22,10 +25,14 @@ function App() {
  
 
 if (newcount > 20) {
-  return alert('cant add more than 20')
+  return toast("Can't Add More than 20 Hour", {
+    position:'top-center'
+  })
 
 }else if (allcards.find(item=> item.id === id)){
- return alert('u already added that item')
+ return toast('Already Added That Item',{
+  position:'top-center'
+ })
   
 }
 else {
@@ -46,6 +53,7 @@ else {
     <div className='max-w-7xl mx-auto mt-12 flex gap-5 justify-around'>
       <Cards handleaddcard={handleaddcard}></Cards>
       <Cart allcards={allcards} count={count} remainingtime={remainingtime} ></Cart>
+      <ToastContainer />
     </div>
      
     
